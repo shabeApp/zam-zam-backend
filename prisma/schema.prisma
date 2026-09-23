@@ -124,8 +124,8 @@ model Product {
   ingredients Json?
 
   // Relations
-  vendorId String @db.ObjectId
-  vendor   Vendor @relation("VendorProducts", fields: [vendorId], references: [id], onDelete: Cascade)
+  // vendorId String? @db.ObjectId
+  // vendor   Vendor @relation("VendorProducts", fields: [vendorId], references: [id], onDelete: Cascade)
 
   categoryId String   @db.ObjectId
   category   Category @relation("CategoryProducts", fields: [categoryId], references: [id], onDelete: Cascade)
@@ -138,7 +138,7 @@ model Product {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([vendorId])
+  // @@index([vendorId])
   // @@index([disableProduct])
   @@index([createdAt(sort: Desc)])
   @@index([categoryId])
@@ -148,34 +148,34 @@ model Product {
   @@index([rating(sort: Desc)])
   @@index([categoryId, disableProduct, productIsAvailable])
   @@index([featured, disableProduct])
-  @@index([vendorId, disableProduct])
+  // @@index([vendorId, disableProduct])
   @@index([categoryId, featured, disableProduct])
   @@map("products")
 }
 
-model Vendor {
-  id                String    @id @default(auto()) @map("_id") @db.ObjectId
-  name              String    @unique
-  slug              String    @unique
-  description       String
-  longDescription   String
-  images            String[]
-  descriptionImages String[]
-  vendorProductType String
-  products          Product[] @relation("VendorProducts")
+// model Vendor {
+//   id                String    @id @default(auto()) @map("_id") @db.ObjectId
+//   name              String    @unique
+//   slug              String    @unique
+//   description       String
+//   longDescription   String
+//   images            String[]
+//   descriptionImages String[]
+//   vendorProductType String
+//   products          Product[] @relation("VendorProducts")
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
 
-  @@index([createdAt(sort: Desc)])
-  @@map("vendors")
-}
+//   @@index([createdAt(sort: Desc)])
+//   @@map("vendors")
+// }
 
 model Category {
   id       String  @id @default(auto()) @map("_id") @db.ObjectId
   name     String
   slug     String
-  icon     String  @default("📁")
+  image    String  
   featured Boolean @default(false)
 
   // Self-referential relationship for nested categories

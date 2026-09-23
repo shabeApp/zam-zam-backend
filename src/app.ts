@@ -7,7 +7,7 @@ import { errorHandler } from "./middleware/error-handler.middleware";
 import cookieParser from 'cookie-parser';
 // import { apiStatusCode } from "./lib/apiCode.lib";
 import rootRouter from "./routes/allRoutes";
-// import morgan from "morgan";
+import morgan from "morgan";
 
 
 
@@ -106,7 +106,7 @@ app.use(limiter);
 //     next();
 // });
 
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 
 // ======================================================
 // 5. 🚀  Route

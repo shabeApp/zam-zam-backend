@@ -1,7 +1,7 @@
-import prisma from "../prisma/client";
-import { apiStatusCode } from "../lib/apiCode.lib";
+import prisma from "../../prisma/client";
+import { apiStatusCode } from "../../lib/apiCode.lib";
 import { Prisma } from "@prisma/client";
-import { getMongoDb } from "../searchdb/mongodb.searchdb";
+import { getMongoDb } from "../../searchdb/mongodb.searchdb";
 
 // ====================== CUSTOM ERROR CLASS ======================
 export class ProductError extends Error {

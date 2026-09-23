@@ -1,6 +1,6 @@
-import prisma from "../prisma/client";
+import prisma from "../../prisma/client";
 import { Prisma } from "@prisma/client";
-import { apiStatusCode } from "../lib/apiCode.lib";
+import { apiStatusCode } from "../../lib/apiCode.lib";
 
 // ================= TYPES =================
 export interface CategoryFilterOptions {
