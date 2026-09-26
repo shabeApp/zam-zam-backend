@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as reviewController from "../../controllers/review.controller";
+import * as reviewController from "./review.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as reviewZod from "../../validators/review.zod";
+import * as reviewZod from "./review.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import {
     publicReadLimiter,

@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { AuthRequest } from "../../types/express";
-import * as reviewService from "../../Services/review.service";
+import * as reviewService from "./review.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 
 // Create Review

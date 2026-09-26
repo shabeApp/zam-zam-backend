@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as addressController from "../../controllers/address.controller";
+import * as addressController from "./address.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as addressZod from "../../validators/address.zod";
+import * as addressZod from "./address.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import { addressWriteLimiter } from "../../middleware/rateLimiter.middleware";
 

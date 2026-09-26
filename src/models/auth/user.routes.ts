@@ -1,8 +1,8 @@
 import { Router } from "express";
-import * as userController from "../controllers/auth.controller";
-import { validateZod } from "../middleware/validate-zod.middleware"
-import * as z from "../validators/user.zod"
-import { authGuard } from "../middleware/auth.guard"
+import * as userController from "./auth.controller";
+import { validateZod } from "../../middleware/validate-zod.middleware"
+import * as z from "./user.zod"
+import { authGuard } from "../../middleware/auth.guard"
 import {
     signupLimiter,
     loginLimiter,
@@ -11,7 +11,7 @@ import {
     resetPasswordLimiter,
     otpSendLimiter,
     otpVerifyLimiter,
-} from "../middleware/rateLimiter.middleware";
+} from "../../middleware/rateLimiter.middleware";
 
 const userRouter = Router();
 

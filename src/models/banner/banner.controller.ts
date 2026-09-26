@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as bannerService from "../../Services/banner.service";
+import * as bannerService from "./banner.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 import { redisClient } from "../../cache/redis.config";
 

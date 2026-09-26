@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as couponController from "../../controllers/coupon.controller";
+import * as couponController from "./coupon.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as couponZod from "../../validators/coupon.zod";
+import * as couponZod from "./coupon.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import {
     couponValidateLimiter,

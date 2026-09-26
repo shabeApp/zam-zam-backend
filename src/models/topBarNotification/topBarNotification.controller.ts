@@ -1,5 +1,5 @@
 import { Response } from "express";
-import * as topBarNotificationService from "../../Services/topBarNotification.service";
+import * as topBarNotificationService from "./topBarNotification.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 import { AuthRequest } from "../../types/express";
 import { redisClient } from "../../cache/redis.config";

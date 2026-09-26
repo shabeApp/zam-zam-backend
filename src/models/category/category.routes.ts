@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as categoryController from "../../controllers/category.controller";
+import * as categoryController from "./category.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as categoryZod from "../../validators/category.zod";
+import * as categoryZod from "./category.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import { publicReadLimiter, adminWriteLimiter } from "../../middleware/rateLimiter.middleware";
 

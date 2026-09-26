@@ -1,9 +1,9 @@
-import { hashPassword, hashToken, randomTokenHex, verifyPassword } from "../utils/hash.utils"
-import { sendEmail } from "../utils/emailSend.utils"
-import { getForgotPasswordEmail, getOtpEmail, getVerificationEmail, getForgotPasswordOtpEmail, getAdminDirectEmail } from "../utils/emailTemplates.utils";
-import { signAccessToken, verifyAccessToken } from "../utils/token.utils";
-import { apiStatusCode } from "../lib/apiCode.lib";
-import prisma from "../prisma/client";
+import { hashPassword, hashToken, randomTokenHex, verifyPassword } from "../../utils/hash.utils"
+import { sendEmail } from "../../utils/emailSend.utils"
+import { getForgotPasswordEmail, getOtpEmail, getVerificationEmail, getForgotPasswordOtpEmail, getAdminDirectEmail } from "../../utils/emailTemplates.utils";
+import { signAccessToken, verifyAccessToken } from "../../utils/token.utils";
+import { apiStatusCode } from "../../lib/apiCode.lib";
+import prisma from "../../prisma/client";
 import { Role } from "@prisma/client";
 
 // Custom errors

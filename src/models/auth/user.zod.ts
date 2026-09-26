@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const signupSchema = z.object({
     body: z.object({
@@ -15,9 +15,6 @@ export const loginSchema = z.object({
         password: z.string().min(1, "Password is required"),
     })
 });
-
-export type SignupSchemaType = z.infer<typeof signupSchema>;
-export type LoginSchemaType = z.infer<typeof loginSchema>;
 
 export const verifySchema = z.object({
     body: z.object({
@@ -70,5 +67,3 @@ export const updateUserSchema = z.object({
         lockedUntil: z.string().datetime().optional().nullable(),
     })
 });
-
-export type UpdateUserSchemaType = z.infer<typeof updateUserSchema>;

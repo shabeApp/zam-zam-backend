@@ -1,4 +1,4 @@
-import * as CouponService from "../Services/coupon.service";
+import * as CouponService from "../models/coupon/coupon.service";
 import prisma from "../prisma/client";
 
 async function verify() {

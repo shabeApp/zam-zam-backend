@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { AuthRequest } from "../../types/express";
-import * as couponService from "../../Services/coupon.service";
+import * as couponService from "./coupon.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 import prisma from "../../prisma/client";
 

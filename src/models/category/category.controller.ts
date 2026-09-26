@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import categoryService from "../../Services/category.service";
+import categoryService from "./category.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 import { redisClient } from "../../cache/redis.config";
 

@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { AuthRequest } from "../../types/express";
-import * as addressService from "../../Services/address.service";
+import * as addressService from "./address.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 import { verifyAccessToken } from "../../utils/token.utils";
 

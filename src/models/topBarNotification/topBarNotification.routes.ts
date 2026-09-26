@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as topBarNotificationController from "../../controllers/topBarNotification.controller";
+import * as topBarNotificationController from "./topBarNotification.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as topBarNotificationZod from "../../validators/topBarNotification.zod";
+import * as topBarNotificationZod from "./topBarNotification.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import { notificationReadLimiter, adminWriteLimiter } from "../../middleware/rateLimiter.middleware";
 

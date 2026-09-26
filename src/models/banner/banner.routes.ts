@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as bannerController from "../../controllers/banner.controller";
+import * as bannerController from "./banner.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as bannerZod from "../../validators/banner.zod";
+import * as bannerZod from "./banner.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import { publicReadLimiter, adminWriteLimiter } from "../../middleware/rateLimiter.middleware";
 

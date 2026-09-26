@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { AuthRequest } from "../../types/express";
-import * as productService from "../../Services/product.service";
+import * as productService from "./product.service";
 import { apiStatusCode } from "../../lib/apiCode.lib";
 import { redisClient } from "../../cache/redis.config";
 

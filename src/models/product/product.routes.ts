@@ -1,7 +1,7 @@
 import { Router } from "express";
-import * as productController from "../../controllers/product.controller";
+import * as productController from "./product.controller";
 import { validateZod } from "../../middleware/validate-zod.middleware";
-import * as productZod from "../../validators/product.zod";
+import * as productZod from "./product.zod";
 import { authGuard } from "../../middleware/auth.guard";
 import {
     productReadLimiter,
